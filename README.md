@@ -281,11 +281,13 @@ The most honest reading of this code:
      extension does not match that range.
 
 5. **No experimental feasibility analysis.** Twin Fock preparation at large N
-   has heralding rates that drop fast (≈ 25% at N = 4 from spontaneous
-   parametric downconversion, ≈ 2% at N = 30). Quadratic spin observables
-   require number-resolving detectors with low timing jitter. We have not
-   produced a realistic dB-precision table including detector and source
-   imperfections.
+   from heralded two-mode squeezed vacuum has rates that drop fast: the
+   maximum success probability is `(sech² r)·(tanh r)^N`, optimized at
+   r* ≈ ln(N)/2, giving ≈ 15% at N = 4 down to ≈ 2% at N = 30 (see results
+   in `experiments/` and the discussion of TMSV→twin-Fock projection in our
+   notes). Quadratic spin observables require number-resolving detectors
+   with low timing jitter. We have not produced a realistic dB-precision
+   table including detector and source imperfections.
 
 6. **Limited noise models.** We treat:
    - Symmetric & asymmetric photon loss (as a Kraus channel after BS₁)

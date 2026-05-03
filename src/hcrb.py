@@ -5,7 +5,6 @@ SDP that cvxpy/SCS can solve. Fixes the npar=3 hardcode in the tantrix10 port.
 """
 import numpy as np
 import cvxpy as cp
-import scipy.sparse as sp
 
 
 def _rank(D, tol=1e-9):
