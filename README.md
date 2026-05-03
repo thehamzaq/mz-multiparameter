@@ -140,7 +140,7 @@ Numerical verification to N = 30 ([experiment 02](experiments/02_joint_bound.py)
 ![bound-saturation](docs/fig_joint_bound.png)
 
 Status: **rederivation**. Liu-Yuan-Lu-Wang J. Phys. A **53**, 023001 (2020),
-Cassemiro et al. arXiv:2412.19119 (2025) cover this.
+Du-Liu-Steinhoff-Vitagliano arXiv:2412.19119 (2024) cover this.
 
 ### Finding 3 — Minimal saturating method-of-moments readout: just **two** observables
 
@@ -315,7 +315,7 @@ The most honest reading of this code:
 | Finding | Genuinely new? | What's known | Confidence |
 |---|---|---|---|
 | 1 — Single-param QFI of standard probes | No | textbook | high |
-| 2 — Bound 4/(N(N+2)) + rotated-twin-Fock optimum | No | Liu-Yuan 2020, Cassemiro arXiv:2412.19119 | high |
+| 2 — Bound 4/(N(N+2)) + rotated-twin-Fock optimum | No | Liu-Yuan 2020, Du et al. arXiv:2412.19119 | high |
 | 3 — 2-observable saturating set {J_x², (J_xJ_z+J_zJ_x)/2} | **Possibly new for joint problem** | V-R 2024 has 2-obs result for *single* parameter | medium — needs lit confirmation |
 | 4 — HCRB = SLD numerically under loss | **Possibly new** for this probe | similar results for Gaussian states (Albarelli 2019); not for twin Fock under loss as far as we found | medium |
 | 5 — F_θθ exact invariance under one-arm loss & dephasing | **Possibly new** | strongest candidate for genuine novelty | low — strong numerics, no proof, no targeted lit confirmation |
@@ -394,8 +394,8 @@ Primary references this work builds on:
 - F. Albarelli, J. F. Friel, A. Datta. *Phys. Rev. Lett.* **123**, 200503 (2019). [arXiv:1906.05724](https://arxiv.org/abs/1906.05724). HCRB SDP formulation.
 - J. Liu, H. Yuan, X.-M. Lu, X. Wang. *J. Phys. A* **53**, 023001 (2020). [arXiv:1907.08037](https://arxiv.org/abs/1907.08037). Multi-parameter quantum Fisher information review.
 - T. J. Volkoff & C. Ryu. *Frontiers in Physics* (2024). [arXiv:2308.05871](https://arxiv.org/abs/2308.05871). Globally optimal interferometry with lossy twin Fock probes.
-- arXiv:2412.19119 (Jan 2025). Multiparameter SU(2) and SU(1,1) estimation resources.
-- M. Cimini et al. arXiv:2403.04722 (2024). Joint phase + phase-diffusion estimation.
+- S. Du, S. Liu, F. E. S. Steinhoff, G. Vitagliano. arXiv:2412.19119 (2024). Multiparameter SU(2) and SU(1,1) estimation resources.
+- J. Jayakumar, M. E. Mycroft, M. Barbieri, M. Stobińska. arXiv:2403.04722 (2024). Joint phase + phase-diffusion estimation.
 - L. Pezzè & A. Smerzi. *Rev. Mod. Phys.* **90**, 035005 (2018). Quantum metrology review.
 
 External code consulted:

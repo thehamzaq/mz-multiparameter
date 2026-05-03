@@ -118,29 +118,29 @@
         {
           "set": "Jx\u00b2 + Jz\u00b2",
           "k": 2,
-          "best_Theta_over_pi": 1.2200979767133407e-06,
-          "N2_Tr_Finv": 575993.6073278134,
+          "best_Theta_over_pi": 1.2398138681394715e-06,
+          "N2_Tr_Finv": 575993.6074163133,
           "saturates": false
         },
         {
           "set": "Jx\u00b2 + {Jx,Jz}/2",
           "k": 2,
           "best_Theta_over_pi": 0.2500039950284094,
-          "N2_Tr_Finv": 3.2018401183563903,
+          "N2_Tr_Finv": 3.201840118356391,
           "saturates": true
         },
         {
           "set": "Jx\u00b2 + Jz\u00b2 + {Jx,Jz}/2",
           "k": 3,
           "best_Theta_over_pi": 0.7518821022727273,
-          "N2_Tr_Finv": 3.2000401648839563,
+          "N2_Tr_Finv": 3.2000401650750545,
           "saturates": true
         },
         {
           "set": "D = full 6-observable set",
           "k": 6,
           "best_Theta_over_pi": 0.7518821022727273,
-          "N2_Tr_Finv": 3.2000401661583133,
+          "N2_Tr_Finv": 3.200040167118668,
           "saturates": true
         }
       ]
@@ -166,8 +166,8 @@
         {
           "set": "Jx\u00b2 + Jz\u00b2",
           "k": 2,
-          "best_Theta_over_pi": 1.0000011000787545,
-          "N2_Tr_Finv": 933321.1229192639,
+          "best_Theta_over_pi": 2.5263699623762526e-06,
+          "N2_Tr_Finv": 933321.1229392267,
           "saturates": false
         },
         {
@@ -188,7 +188,7 @@
           "set": "D = full 6-observable set",
           "k": 6,
           "best_Theta_over_pi": -0.25011783838272145,
-          "N2_Tr_Finv": 3.333086405259536,
+          "N2_Tr_Finv": 3.3330866422206054,
           "saturates": true
         }
       ]
@@ -214,8 +214,8 @@
         {
           "set": "Jx\u00b2 + Jz\u00b2",
           "k": 2,
-          "best_Theta_over_pi": 0.5000012311086183,
-          "N2_Tr_Finv": 1889972.0247526038,
+          "best_Theta_over_pi": 0.5000020207310181,
+          "N2_Tr_Finv": 1889972.024760575,
           "saturates": false
         },
         {
@@ -229,14 +229,14 @@
           "set": "Jx\u00b2 + Jz\u00b2 + {Jx,Jz}/2",
           "k": 3,
           "best_Theta_over_pi": 0.7501793618906488,
-          "N2_Tr_Finv": 3.499946886226506,
+          "N2_Tr_Finv": 3.4999468861793073,
           "saturates": true
         },
         {
           "set": "D = full 6-observable set",
           "k": 6,
           "best_Theta_over_pi": 0.7501793618906488,
-          "N2_Tr_Finv": 3.4999470588687664,
+          "N2_Tr_Finv": 3.499947021216179,
           "saturates": true
         }
       ]

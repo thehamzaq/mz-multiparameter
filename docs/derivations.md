@@ -98,8 +98,9 @@ After rotation by exp(−iπ/2 Jx), the operator Jz → −Jy, and so:
 Hence F_θθ = F_φφ = N(N+2)/2, F_θφ = 0, ⟨Jy⟩ = 0 (compatibility), and
 Var(Jy) = 0 (saturating AM-GM). ∎
 
-The saturation also appears in arXiv:2412.19119 (Cassemiro et al.,
-Jan 2025) for two-of-three SU(2) parameters via method-of-moments.
+The saturation also appears in arXiv:2412.19119
+(Du, Liu, Steinhoff, Vitagliano, 2024) for two-of-three SU(2)
+parameters via method-of-moments.
 
 ## 4. The algebraic identity Jy|j,0⟩ = −i·{Jx, Jz}|j,0⟩
 

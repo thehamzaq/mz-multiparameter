@@ -26,7 +26,7 @@
       "F_theta_theta": 40.0,
       "F_phi_phi": 39.99999999999998,
       "F_theta_phi": 0.0,
-      "compatibility_Jy": 0.0,
+      "compatibility_Jy": 1.232595164407831e-32,
       "N2_Tr_Finv": 3.2000000000000006,
       "bound_4N_over_Np2": 3.2,
       "gap": 4.440892098500626e-16
@@ -43,18 +43,18 @@
     },
     {
       "N": 14,
-      "F_theta_theta": 111.99999999999991,
+      "F_theta_theta": 111.99999999999989,
       "F_phi_phi": 111.99999999999997,
       "F_theta_phi": 0.0,
       "compatibility_Jy": 5.423418723394456e-31,
-      "N2_Tr_Finv": 3.5000000000000018,
+      "N2_Tr_Finv": 3.5000000000000027,
       "bound_4N_over_Np2": 3.5,
-      "gap": 1.7763568394002505e-15
+      "gap": 2.6645352591003757e-15
     },
     {
       "N": 18,
       "F_theta_theta": 180.0000000000001,
-      "F_phi_phi": 179.99999999999994,
+      "F_phi_phi": 179.99999999999997,
       "F_theta_phi": 0.0,
       "compatibility_Jy": 2.465190328815662e-31,
       "N2_Tr_Finv": 3.5999999999999996,
@@ -76,7 +76,7 @@
       "F_theta_theta": 480.00000000000045,
       "F_phi_phi": 479.9999999999998,
       "F_theta_phi": 0.0,
-      "compatibility_Jy": 5.17689969051289e-31,
+      "compatibility_Jy": 3.944304526105059e-31,
       "N2_Tr_Finv": 3.749999999999999,
       "bound_4N_over_Np2": 3.75,
       "gap": -8.881784197001252e-16
