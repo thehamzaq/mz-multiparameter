@@ -56,7 +56,7 @@ Var(Jx) + Var(Jy) + Var(Jz) = ⟨J²⟩ = j(j+1) = N(N+2)/4.
 Multiplying by 4: `4(Var Jx + Var Jy + Var Jz) = N(N+2)`. With Var(Jy) = 0
 (Matsumoto compatibility for joint estimation; see §3), this becomes
 `F_θθ + F_φφ = N(N+2)`. Minimising `Tr[F⁻¹] = 1/F_θθ + 1/F_φφ` subject to
-the sum constraint gives, by AM-GM,
+the sum constraint gives, by convexity of 1/x (equivalently AM-HM),
 
 ```
 F_θθ = F_φφ = N(N+2)/2,    Tr[F⁻¹]_min = 4/(N(N+2)).   ∎
@@ -86,17 +86,23 @@ language: the in-between state of an MZI with twin Fock at the input and a
 | Jz \|tF⟩ | = | 0 |
 
 So Var(Jx)|tF⟩ = ⟨Jx²⟩ = c²/4 + c²/4 = j(j+1)/2 = N(N+2)/8 (similarly Jy).
-After rotation by exp(−iπ/2 Jx), the operator Jz → −Jy, and so:
+
+For ψ_opt = U|tF⟩ with U = exp(−iπ/2 Jx), the Heisenberg-rotated
+operators are U† Jx U = Jx (Jx commutes with the rotation), U† Jy U = −Jz,
+U† Jz U = +Jy (90° rotation about x sending y → −z and z → +y in the
+convention used throughout this code, where U†AU is the operator seen
+in the rotated frame for an unrotated observer of the rotated state).
+Hence:
 
 | | |
 |---|---|
-| ⟨Jα⟩_ψ_opt | = 0 (parity around Jx) |
-| Var(Jx)_ψ_opt | = Var(Jx)\|tF⟩ = N(N+2)/8 (Jx commutes with the rotation) |
-| Var(Jy)_ψ_opt | = Var(Jz)_\|tF⟩ = 0 (twin Fock is Jz=0 eigenstate) |
+| ⟨Jα⟩_ψ_opt | = 0 for α ∈ {x, y, z} (parity around Jx + Jz=0 on tF) |
+| Var(Jx)_ψ_opt | = Var(Jx)\|tF⟩ = N(N+2)/8 |
+| Var(Jy)_ψ_opt | = Var(−Jz)\|tF⟩ = Var(Jz)\|tF⟩ = 0 |
 | Var(Jz)_ψ_opt | = Var(Jy)\|tF⟩ = N(N+2)/8 |
 
 Hence F_θθ = F_φφ = N(N+2)/2, F_θφ = 0, ⟨Jy⟩ = 0 (compatibility), and
-Var(Jy) = 0 (saturating AM-GM). ∎
+Var(Jy) = 0 (saturating the AM-HM bound). ∎
 
 The saturation also appears in arXiv:2412.19119
 (Du, Liu, Steinhoff, Vitagliano, 2024) for two-of-three SU(2)
