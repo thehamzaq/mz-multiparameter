@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: "Multi-parameter Mach-Zehnder estimation: numerical exploration"
+message: >-
+  If you use this code in research, please cite both this repository and
+  the associated 2020 M.Sc. thesis.
+type: software
+authors:
+  - family-names: Qureshi
+    given-names: Hamza
+    email: thehamzaq@gmail.com
+  - name: "Anthropic Claude (AI assistant)"
+    affiliation: "AI assistant; co-author per ICMJE guidance is not appropriate"
+license: GPL-3.0
+repository-code: "https://github.com/thehamzaq/mz-multiparameter"
+references:
+  - type: thesis
+    title: "Variable Beam-Splitter Reflectivity Estimation for Interferometry"
+    authors:
+      - family-names: Qureshi
+        given-names: Hamza
+        email: thehamzaq@gmail.com
+    year: 2020
+    institution:
+      name: "University of Calgary, Department of Physics and Astronomy"
+    url: "https://ucalgary.scholaris.ca/items/f65d88e6-50cb-4ef9-8ece-a6de6895717d"
+abstract: >-
+  Python toolkit and reproducible experiments for two-parameter (beam-splitter
+  reflectivity, phase) Mach-Zehnder quantum metrology with twin-Fock probes,
+  including symmetric and asymmetric photon loss and Jz-dephasing. Numerical
+  observations include: minimal 2-observable method-of-moments readout
+  saturating the joint Cramér-Rao bound; Holevo bound coincides with SLD bound
+  numerically under photon loss; exact invariance of the reflectivity quantum
+  Fisher information under one-arm photon loss and arbitrary Jz-dephasing.
+  Largely AI-generated; not yet peer-reviewed.

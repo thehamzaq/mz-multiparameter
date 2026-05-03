@@ -1,0 +1,101 @@
+{
+  "description": "\nExperiment 07: Parity readout vs minimal 2-observable readout for joint estimation.\n\nVolkoff & Ryu (Frontiers Phys 2024) showed that for SINGLE-parameter phase\nestimation, parity readout on a twin-Fock probe is locally optimal at \u03c6=0\n(but not globally optimal across all phases). For joint TWO-parameter\n(\u03b8, \u03c6) estimation, we show here that parity is wholly inadequate:\n\n  - Parity is a single observable \u27f9 method-of-moments classical Fisher\n    matrix from parity is rank 1.\n  - F_C(\u03b8) \u2248 0 (no reflectivity information)\n  - F_C(\u03c6) \u2248 N(N+2)/2 at \u03b7=1 (recovers SLD bound for phase only)\n  - Under any photon loss, F_C(\u03c6) collapses by orders of magnitude.\n\nIn contrast, our 2-observable readout {Jx\u00b2, (Jx Jz + Jz Jx)/2}:\n  - Has rank-2 CFI matrix\n  - Saturates the joint SLD-CR bound at \u03b7=1\n  - Retains \u226566% of QFI under photon loss across \u03b7 \u2208 [0.1, 1].\n\nThis experiment quantifies the gap.\n",
+  "rows": [
+    {
+      "N": 4,
+      "eta": 1.0,
+      "F_C_theta_theta": 7.499902065967283e-09,
+      "F_C_phi_phi": 11.999399357615879,
+      "F_C_theta_phi": -0.00029999053323821707,
+      "rank": 1
+    },
+    {
+      "N": 4,
+      "eta": 0.9,
+      "F_C_theta_theta": 1.886939249767006e-12,
+      "F_C_phi_phi": 0.0030189953274058884,
+      "F_C_theta_phi": -7.54762265759581e-08,
+      "rank": 1
+    },
+    {
+      "N": 4,
+      "eta": 0.7,
+      "F_C_theta_theta": 2.2166140958046216e-13,
+      "F_C_phi_phi": 0.00035464657592253147,
+      "F_C_theta_phi": -8.86631038943893e-09,
+      "rank": 1
+    },
+    {
+      "N": 4,
+      "eta": 0.5,
+      "F_C_theta_theta": 4.0904673890384633e-14,
+      "F_C_phi_phi": 6.544474579192672e-05,
+      "F_C_theta_phi": -1.6361527998502719e-09,
+      "rank": 1
+    },
+    {
+      "N": 6,
+      "eta": 1.0,
+      "F_C_theta_theta": 1.4999187649620313e-08,
+      "F_C_phi_phi": 23.997897239212115,
+      "F_C_theta_phi": -0.0005999574683985923,
+      "rank": 1
+    },
+    {
+      "N": 6,
+      "eta": 0.9,
+      "F_C_theta_theta": 4.201368043704785e-12,
+      "F_C_phi_phi": 0.006721964396689862,
+      "F_C_theta_phi": -1.680519158092942e-07,
+      "rank": 1
+    },
+    {
+      "N": 6,
+      "eta": 0.7,
+      "F_C_theta_theta": 3.5602718097695794e-13,
+      "F_C_phi_phi": 0.0005696256978984316,
+      "F_C_theta_phi": -1.4240864841533006e-08,
+      "rank": 1
+    },
+    {
+      "N": 6,
+      "eta": 0.5,
+      "F_C_theta_theta": 6.086598546132258e-14,
+      "F_C_phi_phi": 9.73831561444649e-05,
+      "F_C_theta_phi": -2.434609160844243e-09,
+      "rank": 1
+    },
+    {
+      "N": 8,
+      "eta": 1.0,
+      "F_C_theta_theta": 2.4997397260218732e-08,
+      "F_C_phi_phi": 39.99449198254104,
+      "F_C_theta_phi": -0.0009998790948450775,
+      "rank": 1
+    },
+    {
+      "N": 8,
+      "eta": 0.9,
+      "F_C_theta_theta": 7.309383679212177e-12,
+      "F_C_phi_phi": 0.011694618275521474,
+      "F_C_theta_phi": -2.92370401986441e-07,
+      "rank": 1
+    },
+    {
+      "N": 8,
+      "eta": 0.7,
+      "F_C_theta_theta": 4.881908062984243e-13,
+      "F_C_phi_phi": 0.0007810789707464083,
+      "F_C_theta_phi": -1.95273032575272e-08,
+      "rank": 1
+    },
+    {
+      "N": 8,
+      "eta": 0.5,
+      "F_C_theta_theta": 8.07926290341666e-14,
+      "F_C_phi_phi": 0.00012926386410302984,
+      "F_C_theta_phi": -3.2316508815153617e-09,
+      "rank": 1
+    }
+  ]
+}

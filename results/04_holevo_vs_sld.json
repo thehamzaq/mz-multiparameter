@@ -1,0 +1,15 @@
+{
+  "description": "Holevo vs SLD bound under photon loss. Pre-computed results from earlier session runs (the full experiment takes ~30+ minutes; CI runs only experiments 01-03 and 07). To regenerate, run `python experiments/04_holevo_vs_sld.py`.",
+  "rows": [
+    {"N": 4, "eta": 1.0, "big_dim": 15, "SLD_CRB": 0.166667, "HCRB": 0.166668, "SLD_x_N2": 2.6667, "HCRB_x_N2": 2.6667, "gap_percent": 0.0005, "solver_status": "optimal"},
+    {"N": 4, "eta": 0.9, "big_dim": 15, "SLD_CRB": 0.227113, "HCRB": 0.227113, "SLD_x_N2": 3.6338, "HCRB_x_N2": 3.6338, "gap_percent": -0.0001, "solver_status": "optimal"},
+    {"N": 4, "eta": 0.7, "big_dim": 15, "SLD_CRB": 0.451106, "HCRB": 0.451105, "SLD_x_N2": 7.2177, "HCRB_x_N2": 7.2177, "gap_percent": -0.0003, "solver_status": "optimal"},
+    {"N": 4, "eta": 0.5, "big_dim": 15, "SLD_CRB": 1.025644, "HCRB": 1.025644, "SLD_x_N2": 16.4103, "HCRB_x_N2": 16.4103, "gap_percent": 0.0000, "solver_status": "optimal"},
+    {"N": 6, "eta": 1.0, "big_dim": 28, "SLD_CRB": 0.083333, "HCRB": 0.083336, "SLD_x_N2": 3.0000, "HCRB_x_N2": 3.0001, "gap_percent": 0.0009, "solver_status": "optimal"},
+    {"N": 6, "eta": 0.9, "big_dim": 28, "SLD_CRB": 0.124911, "HCRB": 0.124910, "SLD_x_N2": 4.4968, "HCRB_x_N2": 4.4967, "gap_percent": -0.0004, "solver_status": "optimal"},
+    {"N": 6, "eta": 0.7, "big_dim": 28, "SLD_CRB": 0.288037, "HCRB": 0.288037, "SLD_x_N2": 10.3693, "HCRB_x_N2": 10.3693, "gap_percent": 0.0000, "solver_status": "optimal"},
+    {"N": 6, "eta": 0.5, "big_dim": 28, "SLD_CRB": 0.701756, "HCRB": 0.701756, "SLD_x_N2": 25.2632, "HCRB_x_N2": 25.2632, "gap_percent": -0.0000, "solver_status": "optimal"},
+    {"N": 8, "eta": 1.0, "big_dim": 45, "SLD_CRB": 0.050000, "HCRB": 0.050001, "SLD_x_N2": 3.2000, "HCRB_x_N2": 3.2001, "gap_percent": 0.0009, "solver_status": "optimal"},
+    {"N": 8, "eta": 0.5, "big_dim": 45, "SLD_CRB": 0.533480, "HCRB": 0.533480, "SLD_x_N2": 34.1427, "HCRB_x_N2": 34.1427, "gap_percent": 0.0000, "solver_status": "optimal"}
+  ]
+}

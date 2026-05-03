@@ -1,0 +1,245 @@
+{
+  "description": "\nExperiment 03: Minimal saturating method-of-moments observable set.\n\nClaim (numerical observation): For the rotated-twin-Fock probe at the\nslightly-off-symmetric operating point (\u03b8_op, \u03c6_op, \u0398_op) = (\u03c0/2 + \u03b5, \u03c0/2 + \u03b5, \u0398),\nthe minimal observable set whose method-of-moments classical Fisher matrix\nsaturates the joint quantum Cram\u00e9r-Rao bound is\n\n    D_min = { Jx\u00b2 ,  (Jx Jz + Jz Jx) / 2 }     (only 2 quadratic observables)\n\nVerified for N \u2208 {4, 6, 8, 10, 14}.\n\nAlgebraic reason (numerical evidence; symbolic proof open):\nOn the rotated twin Fock, Jy acts trivially (Jy=0 eigenstate), and the\nidentity Jy|j,0\u27e9 = -i\u00b7{Jx,Jz}|j,0\u27e9 on twin Fock lifts to: the missing Jy\ndirection in the SLD operators is synthesised from the anticommutator\n{Jx, Jz}. The Jx\u00b2 observable carries the F_\u03b8\u03b8-direction information.\n\nCompare to Volkoff-Ryu Frontiers Phys 2024 who showed that for *single*-\nparameter phase, the 2-observable set {Jz\u00b2, (J+\u00b2 + J-\u00b2)/2} is globally\noptimal. Our 2-observable set for the joint *two*-parameter problem differs\nin the choice of the second observable; the Jx\u00b2 \u2194 Jz\u00b2 swap is the key change.\n",
+  "rows": [
+    {
+      "N": 4,
+      "bound": 2.6666666666666665,
+      "results": [
+        {
+          "set": "Jx\u00b2",
+          "k": 1,
+          "best_Theta_over_pi": 0.05,
+          "N2_Tr_Finv": 1000000.0,
+          "saturates": false
+        },
+        {
+          "set": "{Jx,Jz}/2",
+          "k": 1,
+          "best_Theta_over_pi": 0.05,
+          "N2_Tr_Finv": 1000000.0,
+          "saturates": false
+        },
+        {
+          "set": "Jx\u00b2 + Jz\u00b2",
+          "k": 2,
+          "best_Theta_over_pi": 0.500001118413638,
+          "N2_Tr_Finv": 106667.55696145195,
+          "saturates": false
+        },
+        {
+          "set": "Jx\u00b2 + {Jx,Jz}/2",
+          "k": 2,
+          "best_Theta_over_pi": 0.24995930064808247,
+          "N2_Tr_Finv": 2.667033383301639,
+          "saturates": true
+        },
+        {
+          "set": "Jx\u00b2 + Jz\u00b2 + {Jx,Jz}/2",
+          "k": 3,
+          "best_Theta_over_pi": 0.7499567205255682,
+          "N2_Tr_Finv": 2.6665637074101203,
+          "saturates": true
+        },
+        {
+          "set": "D = full 6-observable set",
+          "k": 6,
+          "best_Theta_over_pi": 0.749953008009629,
+          "N2_Tr_Finv": 2.6665997886284796,
+          "saturates": true
+        }
+      ]
+    },
+    {
+      "N": 6,
+      "bound": 3.0,
+      "results": [
+        {
+          "set": "Jx\u00b2",
+          "k": 1,
+          "best_Theta_over_pi": 0.05,
+          "N2_Tr_Finv": 1000000.0,
+          "saturates": false
+        },
+        {
+          "set": "{Jx,Jz}/2",
+          "k": 1,
+          "best_Theta_over_pi": 0.05,
+          "N2_Tr_Finv": 1000000.0,
+          "saturates": false
+        },
+        {
+          "set": "Jx\u00b2 + Jz\u00b2",
+          "k": 2,
+          "best_Theta_over_pi": 1.000002963321617,
+          "N2_Tr_Finv": 299998.0038868472,
+          "saturates": false
+        },
+        {
+          "set": "Jx\u00b2 + {Jx,Jz}/2",
+          "k": 2,
+          "best_Theta_over_pi": 0.2499800248579546,
+          "N2_Tr_Finv": 3.000975079676909,
+          "saturates": true
+        },
+        {
+          "set": "Jx\u00b2 + Jz\u00b2 + {Jx,Jz}/2",
+          "k": 3,
+          "best_Theta_over_pi": 0.747272727272727,
+          "N2_Tr_Finv": 3.0000376505468602,
+          "saturates": true
+        },
+        {
+          "set": "D = full 6-observable set",
+          "k": 6,
+          "best_Theta_over_pi": 0.7468470348011363,
+          "N2_Tr_Finv": 3.0000376500262065,
+          "saturates": true
+        }
+      ]
+    },
+    {
+      "N": 8,
+      "bound": 3.2,
+      "results": [
+        {
+          "set": "Jx\u00b2",
+          "k": 1,
+          "best_Theta_over_pi": 0.05,
+          "N2_Tr_Finv": 1000000.0,
+          "saturates": false
+        },
+        {
+          "set": "{Jx,Jz}/2",
+          "k": 1,
+          "best_Theta_over_pi": 0.05,
+          "N2_Tr_Finv": 1000000.0,
+          "saturates": false
+        },
+        {
+          "set": "Jx\u00b2 + Jz\u00b2",
+          "k": 2,
+          "best_Theta_over_pi": 1.2200979767133407e-06,
+          "N2_Tr_Finv": 575993.6073278134,
+          "saturates": false
+        },
+        {
+          "set": "Jx\u00b2 + {Jx,Jz}/2",
+          "k": 2,
+          "best_Theta_over_pi": 0.2500039950284094,
+          "N2_Tr_Finv": 3.2018401183563903,
+          "saturates": true
+        },
+        {
+          "set": "Jx\u00b2 + Jz\u00b2 + {Jx,Jz}/2",
+          "k": 3,
+          "best_Theta_over_pi": 0.7518821022727273,
+          "N2_Tr_Finv": 3.2000401648839563,
+          "saturates": true
+        },
+        {
+          "set": "D = full 6-observable set",
+          "k": 6,
+          "best_Theta_over_pi": 0.7518821022727273,
+          "N2_Tr_Finv": 3.2000401661583133,
+          "saturates": true
+        }
+      ]
+    },
+    {
+      "N": 10,
+      "bound": 3.3333333333333335,
+      "results": [
+        {
+          "set": "Jx\u00b2",
+          "k": 1,
+          "best_Theta_over_pi": 0.05,
+          "N2_Tr_Finv": 1000000.0,
+          "saturates": false
+        },
+        {
+          "set": "{Jx,Jz}/2",
+          "k": 1,
+          "best_Theta_over_pi": 0.05,
+          "N2_Tr_Finv": 1000000.0,
+          "saturates": false
+        },
+        {
+          "set": "Jx\u00b2 + Jz\u00b2",
+          "k": 2,
+          "best_Theta_over_pi": 1.0000011000787545,
+          "N2_Tr_Finv": 933321.1229192639,
+          "saturates": false
+        },
+        {
+          "set": "Jx\u00b2 + {Jx,Jz}/2",
+          "k": 2,
+          "best_Theta_over_pi": 0.24995339133522726,
+          "N2_Tr_Finv": 3.336291833305737,
+          "saturates": true
+        },
+        {
+          "set": "Jx\u00b2 + Jz\u00b2 + {Jx,Jz}/2",
+          "k": 3,
+          "best_Theta_over_pi": -0.25011783838272145,
+          "N2_Tr_Finv": 3.3330863795664105,
+          "saturates": true
+        },
+        {
+          "set": "D = full 6-observable set",
+          "k": 6,
+          "best_Theta_over_pi": -0.25011783838272145,
+          "N2_Tr_Finv": 3.333086405259536,
+          "saturates": true
+        }
+      ]
+    },
+    {
+      "N": 14,
+      "bound": 3.5,
+      "results": [
+        {
+          "set": "Jx\u00b2",
+          "k": 1,
+          "best_Theta_over_pi": 0.05,
+          "N2_Tr_Finv": 1000000.0,
+          "saturates": false
+        },
+        {
+          "set": "{Jx,Jz}/2",
+          "k": 1,
+          "best_Theta_over_pi": 0.05,
+          "N2_Tr_Finv": 1000000.0,
+          "saturates": false
+        },
+        {
+          "set": "Jx\u00b2 + Jz\u00b2",
+          "k": 2,
+          "best_Theta_over_pi": 0.5000012311086183,
+          "N2_Tr_Finv": 1889972.0247526038,
+          "saturates": false
+        },
+        {
+          "set": "Jx\u00b2 + {Jx,Jz}/2",
+          "k": 2,
+          "best_Theta_over_pi": 0.2499917047674,
+          "N2_Tr_Finv": 3.5059502935522557,
+          "saturates": true
+        },
+        {
+          "set": "Jx\u00b2 + Jz\u00b2 + {Jx,Jz}/2",
+          "k": 3,
+          "best_Theta_over_pi": 0.7501793618906488,
+          "N2_Tr_Finv": 3.499946886226506,
+          "saturates": true
+        },
+        {
+          "set": "D = full 6-observable set",
+          "k": 6,
+          "best_Theta_over_pi": 0.7501793618906488,
+          "N2_Tr_Finv": 3.4999470588687664,
+          "saturates": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "description": "\nExperiment 02: Joint quantum Cram\u00e9r-Rao bound saturation.\n\nClaim: For two-parameter (\u03b8, \u03c6) Mach-Zehnder estimation on the symmetric\nN-photon (j = N/2) Hilbert subspace, the SLD quantum Cram\u00e9r-Rao bound is\n\n    Tr[F\u207b\u00b9]  \u2265  4 / (N(N+2)),     N\u00b2\u00b7Tr[F\u207b\u00b9]  \u2192  4    as N \u2192 \u221e\n\nThis bound is the standard SU(2) isotropy bound and follows from\n4\u00b7(Var Jx + Var Jy + Var Jz) = N(N+2)/4\u00b74 = N(N+2) for \u27e8J\u27e9 = 0 states,\nwith AM-GM minimisation over Tr[F\u207b\u00b9] = 1/F_\u03b8\u03b8 + 1/F_\u03c6\u03c6.\n\nSaturating state: \u03c8_opt = exp(-i\u03c0 Jx/2) |N/2, N/2\u27e9  (rotated twin Fock).\nEquivalently: the in-between state of a Mach-Zehnder with twin Fock at the\ninput and a 50:50 first beam splitter (Holland-Burnett 1993 configuration).\n\nThis experiment verifies the saturation numerically up to N = 30.\n",
+  "rows": [
+    {
+      "N": 4,
+      "F_theta_theta": 12.0,
+      "F_phi_phi": 12.000000000000007,
+      "F_theta_phi": 0.0,
+      "compatibility_Jy": 8.165271319600143e-33,
+      "N2_Tr_Finv": 2.666666666666666,
+      "bound_4N_over_Np2": 2.6666666666666665,
+      "gap": -4.440892098500626e-16
+    },
+    {
+      "N": 6,
+      "F_theta_theta": 23.99999999999999,
+      "F_phi_phi": 23.999999999999993,
+      "F_theta_phi": 0.0,
+      "compatibility_Jy": 1.4458221273582593e-31,
+      "N2_Tr_Finv": 3.0000000000000013,
+      "bound_4N_over_Np2": 3.0,
+      "gap": 1.3322676295501878e-15
+    },
+    {
+      "N": 8,
+      "F_theta_theta": 40.0,
+      "F_phi_phi": 39.99999999999998,
+      "F_theta_phi": 0.0,
+      "compatibility_Jy": 0.0,
+      "N2_Tr_Finv": 3.2000000000000006,
+      "bound_4N_over_Np2": 3.2,
+      "gap": 4.440892098500626e-16
+    },
+    {
+      "N": 10,
+      "F_theta_theta": 60.000000000000014,
+      "F_phi_phi": 60.00000000000002,
+      "F_theta_phi": 0.0,
+      "compatibility_Jy": 1.2510840918739484e-30,
+      "N2_Tr_Finv": 3.3333333333333317,
+      "bound_4N_over_Np2": 3.3333333333333335,
+      "gap": -1.7763568394002505e-15
+    },
+    {
+      "N": 14,
+      "F_theta_theta": 111.99999999999991,
+      "F_phi_phi": 111.99999999999997,
+      "F_theta_phi": 0.0,
+      "compatibility_Jy": 5.423418723394456e-31,
+      "N2_Tr_Finv": 3.5000000000000018,
+      "bound_4N_over_Np2": 3.5,
+      "gap": 1.7763568394002505e-15
+    },
+    {
+      "N": 18,
+      "F_theta_theta": 180.0000000000001,
+      "F_phi_phi": 179.99999999999994,
+      "F_theta_phi": 0.0,
+      "compatibility_Jy": 2.465190328815662e-31,
+      "N2_Tr_Finv": 3.5999999999999996,
+      "bound_4N_over_Np2": 3.6,
+      "gap": -4.440892098500626e-16
+    },
+    {
+      "N": 24,
+      "F_theta_theta": 311.99999999999966,
+      "F_phi_phi": 312.0,
+      "F_theta_phi": 0.0,
+      "compatibility_Jy": 1.0107280348144214e-30,
+      "N2_Tr_Finv": 3.6923076923076943,
+      "bound_4N_over_Np2": 3.6923076923076925,
+      "gap": 1.7763568394002505e-15
+    },
+    {
+      "N": 30,
+      "F_theta_theta": 480.00000000000045,
+      "F_phi_phi": 479.9999999999998,
+      "F_theta_phi": 0.0,
+      "compatibility_Jy": 5.17689969051289e-31,
+      "N2_Tr_Finv": 3.749999999999999,
+      "bound_4N_over_Np2": 3.75,
+      "gap": -8.881784197001252e-16
+    }
+  ]
+}

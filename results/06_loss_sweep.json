@@ -1,0 +1,905 @@
+{
+  "description": "\nExperiment 06: Joint quantum Cram\u00e9r-Rao bound under symmetric photon loss.\n\nFor \u03b7 \u2208 [0.4, 1.0] and N \u2208 [4, 20], compute the joint SLD-Cram\u00e9r-Rao bound\nN\u00b2\u00b7Tr[F\u207b\u00b9] under symmetric photon loss for three probes:\n\n  - rotated twin Fock     (joint-CR-saturating at \u03b7=1)\n  - sine state (BW)       (Berry-Wiseman optimal for phase-only)\n  - NOON                  (Heisenberg phase, SQL reflectivity)\n\nFindings:\n  - rot Twin Fock dominates throughout \u03b7 \u2208 [0.4, 1.0]\n  - NOON catastrophically fails under loss for joint estimation\n    (F_\u03c6\u03c6 \u2192 0 quickly; Tr[F\u207b\u00b9] blows up by 4\u20136 orders of magnitude)\n  - sine is more loss-robust than rot-TF in *relative* terms but starts so\n    much worse it's dominated for all \u03b7 \u2265 0.5.\n",
+  "rows": [
+    {
+      "N": 4,
+      "eta": 1.0,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 11.999999479992752,
+      "F_phi_phi": 11.999999479997472,
+      "F_theta_phi": 7.271960811294775e-15,
+      "N2_Tr_Finv": 2.6666667822233134,
+      "ratio_to_bound": 1.0000000433337426
+    },
+    {
+      "N": 4,
+      "eta": 1.0,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.06734700871253604,
+      "F_phi_phi": 4.666666569999043,
+      "F_theta_phi": 3.5192705954284476e-12,
+      "N2_Tr_Finv": 241.0040823629539,
+      "ratio_to_bound": 90.37653088610772
+    },
+    {
+      "N": 4,
+      "eta": 1.0,
+      "probe": "NOON",
+      "F_theta_theta": 3.9999999066661323,
+      "F_phi_phi": 15.999999146663288,
+      "F_theta_phi": -8.104628079763643e-15,
+      "N2_Tr_Finv": 5.000000146667418,
+      "ratio_to_bound": 1.8750000550002817
+    },
+    {
+      "N": 4,
+      "eta": 0.95,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 10.304744569374915,
+      "F_phi_phi": 10.304744569378972,
+      "F_theta_phi": -1.2034817587013238e-13,
+      "N2_Tr_Finv": 3.1053656676843584,
+      "ratio_to_bound": 1.1645121253816344
+    },
+    {
+      "N": 4,
+      "eta": 0.95,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.06077982017331732,
+      "F_phi_phi": 4.3965795024180405,
+      "F_theta_phi": 3.2713341584216392e-12,
+      "N2_Tr_Finv": 266.8844598619949,
+      "ratio_to_bound": 100.0816724482481
+    },
+    {
+      "N": 4,
+      "eta": 0.95,
+      "probe": "NOON",
+      "F_theta_theta": 3.7995249167590357,
+      "F_phi_phi": 13.032099304951942,
+      "F_theta_phi": -6.980527267602888e-14,
+      "N2_Tr_Finv": 5.438790518267894,
+      "ratio_to_bound": 2.0395464443504605
+    },
+    {
+      "N": 4,
+      "eta": 0.9,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 8.80631964638106,
+      "F_phi_phi": 8.806319646385289,
+      "F_theta_phi": 9.703349235156517e-14,
+      "N2_Tr_Finv": 3.633754086264931,
+      "ratio_to_bound": 1.362657782349349
+    },
+    {
+      "N": 4,
+      "eta": 0.9,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.054548006900417244,
+      "F_phi_phi": 4.130721213679256,
+      "F_theta_phi": 3.145479102878422e-12,
+      "N2_Tr_Finv": 297.19302358061543,
+      "ratio_to_bound": 111.44738384273079
+    },
+    {
+      "N": 4,
+      "eta": 0.9,
+      "probe": "NOON",
+      "F_theta_theta": 3.5963999258032215,
+      "F_phi_phi": 10.497599440125791,
+      "F_theta_phi": 1.8375752308394552e-13,
+      "N2_Tr_Finv": 5.973051413614139,
+      "ratio_to_bound": 2.2398942801053026
+    },
+    {
+      "N": 4,
+      "eta": 0.8,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 6.328319768161995,
+      "F_phi_phi": 6.328319768166068,
+      "F_theta_phi": -1.7863488466252595e-13,
+      "N2_Tr_Finv": 5.056634489455298,
+      "ratio_to_bound": 1.8962379335457369
+    },
+    {
+      "N": 4,
+      "eta": 0.8,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.04309238236162491,
+      "F_phi_phi": 3.611443783675085,
+      "F_theta_phi": 2.6132598689165907e-12,
+      "N2_Tr_Finv": 375.725683439936,
+      "ratio_to_bound": 140.89713128997602
+    },
+    {
+      "N": 4,
+      "eta": 0.8,
+      "probe": "NOON",
+      "F_theta_theta": 3.1743999412902966,
+      "F_phi_phi": 6.553599650473279,
+      "F_theta_phi": 1.6281073711290162e-13,
+      "N2_Tr_Finv": 7.481729054073477,
+      "ratio_to_bound": 2.805648395277554
+    },
+    {
+      "N": 4,
+      "eta": 0.6,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 3.0067199132526214,
+      "F_phi_phi": 3.0067199132540487,
+      "F_theta_phi": -2.036530666328317e-13,
+      "N2_Tr_Finv": 10.642827041836204,
+      "ratio_to_bound": 3.991060140688577
+    },
+    {
+      "N": 4,
+      "eta": 0.6,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.02422309090078171,
+      "F_phi_phi": 2.6209404353941235,
+      "F_theta_phi": 1.6690242937710991e-12,
+      "N2_Tr_Finv": 666.6314493119208,
+      "ratio_to_bound": 249.98679349197033
+    },
+    {
+      "N": 4,
+      "eta": 0.6,
+      "probe": "NOON",
+      "F_theta_theta": 2.2463999648639765,
+      "F_phi_phi": 2.0735998894075705,
+      "F_theta_phi": -6.217248937854023e-14,
+      "N2_Tr_Finv": 14.838557028150818,
+      "ratio_to_bound": 5.564458885556557
+    },
+    {
+      "N": 4,
+      "eta": 0.4,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 1.1827199750138164,
+      "F_phi_phi": 1.1827199750146047,
+      "F_theta_phi": -7.010017566432929e-14,
+      "N2_Tr_Finv": 27.056277627859895,
+      "ratio_to_bound": 10.146104110447462
+    },
+    {
+      "N": 4,
+      "eta": 0.4,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.010753689157223242,
+      "F_phi_phi": 1.6913241199137186,
+      "F_theta_phi": 9.935670518205146e-13,
+      "N2_Tr_Finv": 1497.321536210298,
+      "ratio_to_bound": 561.4955760788619
+    },
+    {
+      "N": 4,
+      "eta": 0.4,
+      "probe": "NOON",
+      "F_theta_theta": 1.2543999822508352,
+      "F_phi_phi": 0.40959997815457994,
+      "F_theta_phi": -1.072311269457558e-15,
+      "N2_Tr_Finv": 51.81760430463669,
+      "ratio_to_bound": 19.431601614238758
+    },
+    {
+      "N": 8,
+      "eta": 1.0,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 39.999994066658815,
+      "F_phi_phi": 39.999994066658275,
+      "F_theta_phi": 7.593925488436071e-14,
+      "N2_Tr_Finv": 3.200000474667387,
+      "ratio_to_bound": 1.0000001483335583
+    },
+    {
+      "N": 8,
+      "eta": 1.0,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.6050078273292179,
+      "F_phi_phi": 13.055727323569805,
+      "F_theta_phi": 2.130229326269273e-11,
+      "N2_Tr_Finv": 110.68581852943298,
+      "ratio_to_bound": 34.58931829044781
+    },
+    {
+      "N": 8,
+      "eta": 1.0,
+      "probe": "NOON",
+      "F_theta_theta": 7.999999693319805,
+      "F_phi_phi": 63.99998634665407,
+      "F_theta_phi": 1.5543122344752192e-15,
+      "N2_Tr_Finv": 9.000000520013783,
+      "ratio_to_bound": 2.812500162504307
+    },
+    {
+      "N": 8,
+      "eta": 0.95,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 31.174853015639123,
+      "F_phi_phi": 31.174853015631214,
+      "F_theta_phi": -1.226753582343667e-13,
+      "N2_Tr_Finv": 4.105873408153808,
+      "ratio_to_bound": 1.2830854400480651
+    },
+    {
+      "N": 8,
+      "eta": 0.95,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.5456532398915477,
+      "F_phi_phi": 12.020478588864506,
+      "F_theta_phi": 1.9701879622661414e-11,
+      "N2_Tr_Finv": 122.61485476022509,
+      "ratio_to_bound": 38.31714211257034
+    },
+    {
+      "N": 8,
+      "eta": 0.95,
+      "probe": "NOON",
+      "F_theta_theta": 7.599999716016285,
+      "F_phi_phi": 42.458898544591385,
+      "F_theta_phi": 3.6293190674996367e-13,
+      "N2_Tr_Finv": 9.928393037337408,
+      "ratio_to_bound": 3.10262282416794
+    },
+    {
+      "N": 8,
+      "eta": 0.9,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 24.34796277461955,
+      "F_phi_phi": 24.347962774610032,
+      "F_theta_phi": -2.7152423105053503e-13,
+      "N2_Tr_Finv": 5.2571133439325335,
+      "ratio_to_bound": 1.6428479199789165
+    },
+    {
+      "N": 8,
+      "eta": 0.9,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.48952311390950504,
+      "F_phi_phi": 11.042751193197045,
+      "F_theta_phi": 1.7965041900225802e-11,
+      "N2_Tr_Finv": 136.5351425502469,
+      "ratio_to_bound": 42.66723204695215
+    },
+    {
+      "N": 8,
+      "eta": 0.9,
+      "probe": "NOON",
+      "F_theta_theta": 7.199999029187918,
+      "F_phi_phi": 27.54989556268235,
+      "F_theta_phi": 6.661338147750939e-16,
+      "N2_Tr_Finv": 11.211947895550479,
+      "ratio_to_bound": 3.503733717359524
+    },
+    {
+      "N": 8,
+      "eta": 0.8,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 14.994959898501621,
+      "F_phi_phi": 14.994959898494312,
+      "F_theta_phi": -1.8754355707306658e-13,
+      "N2_Tr_Finv": 8.536201554818541,
+      "ratio_to_bound": 2.667562985880794
+    },
+    {
+      "N": 8,
+      "eta": 0.8,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.386758502887426,
+      "F_phi_phi": 9.245102634139723,
+      "F_theta_phi": 1.5256680463916993e-11,
+      "N2_Tr_Finv": 172.40052317920043,
+      "ratio_to_bound": 53.87516349350013
+    },
+    {
+      "N": 8,
+      "eta": 0.8,
+      "probe": "NOON",
+      "F_theta_theta": 6.399917879443982,
+      "F_phi_phi": 10.73741594934868,
+      "F_theta_phi": 1.8932078127420482e-13,
+      "N2_Tr_Finv": 15.960594064121484,
+      "ratio_to_bound": 4.987685645037963
+    },
+    {
+      "N": 8,
+      "eta": 0.6,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 5.936220163875026,
+      "F_phi_phi": 5.936220163873261,
+      "F_theta_phi": 1.7829921566958618e-13,
+      "N2_Tr_Finv": 21.562542571949287,
+      "ratio_to_bound": 6.738294553734152
+    },
+    {
+      "N": 8,
+      "eta": 0.6,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.21820533122568028,
+      "F_phi_phi": 6.1908102488853345,
+      "F_theta_phi": 1.0374531496089679e-11,
+      "N2_Tr_Finv": 303.6396284297934,
+      "ratio_to_bound": 94.88738388431042
+    },
+    {
+      "N": 8,
+      "eta": 0.6,
+      "probe": "NOON",
+      "F_theta_theta": 4.792135562805356,
+      "F_phi_phi": 1.0749540106762154,
+      "F_theta_phi": 2.5133097634451974e-13,
+      "N2_Tr_Finv": 72.89264562125081,
+      "ratio_to_bound": 22.778951756640875
+    },
+    {
+      "N": 8,
+      "eta": 0.4,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 2.2958671590567796,
+      "F_phi_phi": 2.295867159057474,
+      "F_theta_phi": 9.722431193459613e-14,
+      "N2_Tr_Finv": 55.752354614701396,
+      "ratio_to_bound": 17.422610817094185
+    },
+    {
+      "N": 8,
+      "eta": 0.4,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.09768553180470002,
+      "F_phi_phi": 3.7155015312151827,
+      "F_theta_phi": 5.8556650418340825e-12,
+      "N2_Tr_Finv": 672.3886828760749,
+      "ratio_to_bound": 210.1214633987734
+    },
+    {
+      "N": 8,
+      "eta": 0.4,
+      "probe": "NOON",
+      "F_theta_theta": 3.110420422736363,
+      "F_phi_phi": 0.04194303105214328,
+      "F_theta_phi": 1.567463762244967e-13,
+      "N2_Tr_Finv": 1546.4552283574424,
+      "ratio_to_bound": 483.2672588617007
+    },
+    {
+      "N": 12,
+      "eta": 1.0,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 83.99997368007828,
+      "F_phi_phi": 83.99997368008124,
+      "F_theta_phi": 1.7763568394002505e-15,
+      "N2_Tr_Finv": 3.4285725028542235,
+      "ratio_to_bound": 1.000000313332482
+    },
+    {
+      "N": 12,
+      "eta": 1.0,
+      "probe": "sine (BW)",
+      "F_theta_theta": 1.5153230436668017,
+      "F_phi_phi": 25.60865833079318,
+      "F_theta_phi": 5.991040996633501e-12,
+      "N2_Tr_Finv": 100.65234002962058,
+      "ratio_to_bound": 29.356932508639336
+    },
+    {
+      "N": 12,
+      "eta": 1.0,
+      "probe": "NOON",
+      "F_theta_theta": 11.999999300027142,
+      "F_phi_phi": 143.9999308801951,
+      "F_theta_phi": -6.128431095930864e-14,
+      "N2_Tr_Finv": 13.000001179971774,
+      "ratio_to_bound": 3.7916670108251007
+    },
+    {
+      "N": 12,
+      "eta": 0.95,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 59.624028714373395,
+      "F_phi_phi": 59.62402871434861,
+      "F_theta_phi": -4.2366110619695974e-13,
+      "N2_Tr_Finv": 4.8302673638460885,
+      "ratio_to_bound": 1.4088279811217759
+    },
+    {
+      "N": 12,
+      "eta": 0.95,
+      "probe": "sine (BW)",
+      "F_theta_theta": 1.3581760449635745,
+      "F_phi_phi": 23.010474330154576,
+      "F_theta_phi": 4.614671492153555e-12,
+      "N2_Tr_Finv": 112.28256669134308,
+      "ratio_to_bound": 32.749081951641735
+    },
+    {
+      "N": 12,
+      "eta": 0.95,
+      "probe": "NOON",
+      "F_theta_theta": 11.399999302261511,
+      "F_phi_phi": 77.81181527383578,
+      "F_theta_phi": -1.5498713423767185e-13,
+      "N2_Tr_Finv": 14.482198415002085,
+      "ratio_to_bound": 4.2239745377089415
+    },
+    {
+      "N": 12,
+      "eta": 0.9,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 43.02302343588357,
+      "F_phi_phi": 43.02302343584934,
+      "F_theta_phi": 1.7541523789077473e-14,
+      "N2_Tr_Finv": 6.694090210310666,
+      "ratio_to_bound": 1.9524429780072776
+    },
+    {
+      "N": 12,
+      "eta": 0.9,
+      "probe": "sine (BW)",
+      "F_theta_theta": 1.21178222568723,
+      "F_phi_phi": 20.659549085572444,
+      "F_theta_phi": 4.635977298122866e-12,
+      "N2_Tr_Finv": 125.80337580072717,
+      "ratio_to_bound": 36.69265127521209
+    },
+    {
+      "N": 12,
+      "eta": 0.9,
+      "probe": "NOON",
+      "F_theta_theta": 10.79999941862496,
+      "F_phi_phi": 40.66983373178927,
+      "F_theta_phi": -1.2329026688462363e-13,
+      "N2_Tr_Finv": 16.874041912087485,
+      "ratio_to_bound": 4.921595557692183
+    },
+    {
+      "N": 12,
+      "eta": 0.8,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 23.702772740845216,
+      "F_phi_phi": 23.702772740817576,
+      "F_theta_phi": 3.2836398138413463e-13,
+      "N2_Tr_Finv": 12.150477209945953,
+      "ratio_to_bound": 3.5438891862342365
+    },
+    {
+      "N": 12,
+      "eta": 0.8,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.9490023919748047,
+      "F_phi_phi": 16.587366295613297,
+      "F_theta_phi": 3.6131868439044645e-12,
+      "N2_Tr_Finv": 160.41959567350267,
+      "ratio_to_bound": 46.789048738104945
+    },
+    {
+      "N": 12,
+      "eta": 0.8,
+      "probe": "NOON",
+      "F_theta_theta": 9.59999934901408,
+      "F_phi_phi": 9.895599900107142,
+      "F_theta_phi": -2.3084080624760885e-13,
+      "N2_Tr_Finv": 29.551923230435413,
+      "ratio_to_bound": 8.61931094221033
+    },
+    {
+      "N": 12,
+      "eta": 0.6,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 8.776722002034784,
+      "F_phi_phi": 8.776722002024503,
+      "F_theta_phi": -1.9201400065027272e-14,
+      "N2_Tr_Finv": 32.81407340159562,
+      "ratio_to_bound": 9.570771408798723
+    },
+    {
+      "N": 12,
+      "eta": 0.6,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.5307254223463178,
+      "F_phi_phi": 10.360178736486612,
+      "F_theta_phi": 2.4719009309708503e-12,
+      "N2_Tr_Finv": 285.2261165863784,
+      "ratio_to_bound": 83.19095067102704
+    },
+    {
+      "N": 12,
+      "eta": 0.6,
+      "probe": "NOON",
+      "F_theta_theta": 7.199697748504168,
+      "F_phi_phi": 0.3134565059252278,
+      "F_theta_phi": 1.1533475515989515e-14,
+      "N2_Tr_Finv": 479.39471812896056,
+      "ratio_to_bound": 139.82345945428017
+    },
+    {
+      "N": 12,
+      "eta": 0.4,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 3.498209463463674,
+      "F_phi_phi": 3.4982094634599545,
+      "F_theta_phi": 1.3169582123944698e-14,
+      "N2_Tr_Finv": 82.32783171165408,
+      "ratio_to_bound": 24.012284249232444
+    },
+    {
+      "N": 12,
+      "eta": 0.4,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.23832138422214255,
+      "F_phi_phi": 5.88826354221448,
+      "F_theta_phi": 1.2953813393579763e-12,
+      "N2_Tr_Finv": 628.6815248881064,
+      "ratio_to_bound": 183.36544475903105
+    },
+    {
+      "N": 12,
+      "eta": 0.4,
+      "probe": "NOON",
+      "F_theta_theta": 4.7825856191417575,
+      "F_phi_phi": 0.0024159179443620955,
+      "F_theta_phi": 1.9662459139350642e-13,
+      "N2_Tr_Finv": 59634.78262174212,
+      "ratio_to_bound": 17393.478264674784
+    },
+    {
+      "N": 16,
+      "eta": 1.0,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 143.99992248004168,
+      "F_phi_phi": 143.9999224800314,
+      "F_theta_phi": -1.1546319456101628e-13,
+      "N2_Tr_Finv": 3.555557469629758,
+      "ratio_to_bound": 1.0000005383333694
+    },
+    {
+      "N": 16,
+      "eta": 1.0,
+      "probe": "sine (BW)",
+      "F_theta_theta": 2.7283083110734188,
+      "F_phi_phi": 42.33978363682809,
+      "F_theta_phi": -2.62858068644789e-11,
+      "N2_Tr_Finv": 99.87736052242866,
+      "ratio_to_bound": 28.090507646933062
+    },
+    {
+      "N": 16,
+      "eta": 1.0,
+      "probe": "NOON",
+      "F_theta_theta": 15.99999874663633,
+      "F_phi_phi": 255.999781546686,
+      "F_theta_phi": -4.360956040727615e-13,
+      "N2_Tr_Finv": 17.000002106697753,
+      "ratio_to_bound": 4.781250592508743
+    },
+    {
+      "N": 16,
+      "eta": 0.95,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 93.41239062069673,
+      "F_phi_phi": 93.41239062068144,
+      "F_theta_phi": 2.3429095286581994e-13,
+      "N2_Tr_Finv": 5.481071585878048,
+      "ratio_to_bound": 1.541551383528201
+    },
+    {
+      "N": 16,
+      "eta": 0.95,
+      "probe": "sine (BW)",
+      "F_theta_theta": 2.42455522082422,
+      "F_phi_phi": 37.12776108673779,
+      "F_theta_phi": -2.358972071109283e-11,
+      "N2_Tr_Finv": 112.48148642636117,
+      "ratio_to_bound": 31.635418057414082
+    },
+    {
+      "N": 16,
+      "eta": 0.95,
+      "probe": "NOON",
+      "F_theta_theta": 15.199998753547192,
+      "F_phi_phi": 112.67233102772263,
+      "F_theta_phi": -4.463096558993129e-14,
+      "N2_Tr_Finv": 19.11418176390977,
+      "ratio_to_bound": 5.375863621099623
+    },
+    {
+      "N": 16,
+      "eta": 0.9,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 62.92051615707987,
+      "F_phi_phi": 62.920516157059936,
+      "F_theta_phi": 2.502484204704174e-13,
+      "N2_Tr_Finv": 8.137250475216746,
+      "ratio_to_bound": 2.2886016961547098
+    },
+    {
+      "N": 16,
+      "eta": 0.9,
+      "probe": "sine (BW)",
+      "F_theta_theta": 2.146926970277426,
+      "F_phi_phi": 32.60679443001646,
+      "F_theta_phi": -2.0752943149921318e-11,
+      "N2_Tr_Finv": 127.09132380434654,
+      "ratio_to_bound": 35.74443481997247
+    },
+    {
+      "N": 16,
+      "eta": 0.9,
+      "probe": "NOON",
+      "F_theta_theta": 14.399998846108495,
+      "F_phi_phi": 47.43727635476696,
+      "F_theta_phi": 1.8263168755083825e-13,
+      "N2_Tr_Finv": 23.174379084787763,
+      "ratio_to_bound": 6.517794117596559
+    },
+    {
+      "N": 16,
+      "eta": 0.8,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 32.085323662484626,
+      "F_phi_phi": 32.08532366247047,
+      "F_theta_phi": -3.183919132887386e-13,
+      "N2_Tr_Finv": 15.95745161825382,
+      "ratio_to_bound": 4.488033267633887
+    },
+    {
+      "N": 16,
+      "eta": 0.8,
+      "probe": "sine (BW)",
+      "F_theta_theta": 1.6609017773585764,
+      "F_phi_phi": 25.201849568739068,
+      "F_theta_phi": -1.602562685197489e-11,
+      "N2_Tr_Finv": 164.29112088913206,
+      "ratio_to_bound": 46.206877750068394
+    },
+    {
+      "N": 16,
+      "eta": 0.8,
+      "probe": "NOON",
+      "F_theta_theta": 12.799999163723697,
+      "F_phi_phi": 7.205753254878667,
+      "F_theta_phi": 4.5941530964823405e-14,
+      "N2_Tr_Finv": 55.52716841119996,
+      "ratio_to_bound": 15.617016115649989
+    },
+    {
+      "N": 16,
+      "eta": 0.6,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 11.645400882274291,
+      "F_phi_phi": 11.645400882269506,
+      "F_theta_phi": -2.7556222411249933e-13,
+      "N2_Tr_Finv": 43.965854432665445,
+      "ratio_to_bound": 12.365396559187158
+    },
+    {
+      "N": 16,
+      "eta": 0.6,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.9164736106883503,
+      "F_phi_phi": 14.867583707281435,
+      "F_theta_phi": -9.013802945925524e-12,
+      "N2_Tr_Finv": 296.55022513960677,
+      "ratio_to_bound": 83.40475082051441
+    },
+    {
+      "N": 16,
+      "eta": 0.6,
+      "probe": "NOON",
+      "F_theta_theta": 9.599989228059114,
+      "F_phi_phi": 0.07222035200279324,
+      "F_theta_phi": -6.332811174498692e-14,
+      "N2_Tr_Finv": 3571.373872622721,
+      "ratio_to_bound": 1004.4489016751404
+    },
+    {
+      "N": 16,
+      "eta": 0.4,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 4.7475600387233285,
+      "F_phi_phi": 4.7475600387208035,
+      "F_theta_phi": -5.682250453705746e-14,
+      "N2_Tr_Finv": 107.844871012483,
+      "ratio_to_bound": 30.331369972260845
+    },
+    {
+      "N": 16,
+      "eta": 0.4,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.41193061771627926,
+      "F_phi_phi": 8.123008892593392,
+      "F_theta_phi": -4.95157650069232e-12,
+      "N2_Tr_Finv": 652.9792955120754,
+      "ratio_to_bound": 183.6504268627712
+    },
+    {
+      "N": 16,
+      "eta": 0.4,
+      "probe": "NOON",
+      "F_theta_theta": 6.3969906026123144,
+      "F_phi_phi": 0.00010995106895261638,
+      "F_theta_phi": 2.402426759001334e-13,
+      "N2_Tr_Finv": 2328348.442179284,
+      "ratio_to_bound": 654847.9993629237
+    },
+    {
+      "N": 20,
+      "eta": 1.0,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 219.9998188668661,
+      "F_phi_phi": 219.99981886658983,
+      "F_theta_phi": -3.4861002973229915e-13,
+      "N2_Tr_Finv": 3.636366630304482,
+      "ratio_to_bound": 1.0000008233337325
+    },
+    {
+      "N": 20,
+      "eta": 1.0,
+      "probe": "sine (BW)",
+      "F_theta_theta": 4.2266382737821,
+      "F_phi_phi": 63.25168181977904,
+      "F_theta_phi": 1.2947087846271188e-11,
+      "N2_Tr_Finv": 100.9618022282886,
+      "ratio_to_bound": 27.764495612779367
+    },
+    {
+      "N": 20,
+      "eta": 1.0,
+      "probe": "NOON",
+      "F_theta_theta": 19.999998033334002,
+      "F_phi_phi": 399.9994666665066,
+      "F_theta_phi": -5.484501741648273e-13,
+      "N2_Tr_Finv": 21.000003300001705,
+      "ratio_to_bound": 5.775000907500469
+    },
+    {
+      "N": 20,
+      "eta": 0.95,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 130.8718087621093,
+      "F_phi_phi": 130.87180876196499,
+      "F_theta_phi": -1.8729763125992674e-13,
+      "N2_Tr_Finv": 6.112852015781578,
+      "ratio_to_bound": 1.681034304339934
+    },
+    {
+      "N": 20,
+      "eta": 0.95,
+      "probe": "sine (BW)",
+      "F_theta_theta": 3.7201398137346384,
+      "F_phi_phi": 54.14420525162225,
+      "F_theta_phi": 1.0711179949340091e-11,
+      "N2_Tr_Finv": 114.91051939595842,
+      "ratio_to_bound": 31.600392833888566
+    },
+    {
+      "N": 20,
+      "eta": 0.95,
+      "probe": "NOON",
+      "F_theta_theta": 18.999998109069733,
+      "F_phi_phi": 143.39417777086754,
+      "F_theta_phi": -4.833142843420059e-13,
+      "N2_Tr_Finv": 23.842147211029925,
+      "ratio_to_bound": 6.556590483033229
+    },
+    {
+      "N": 20,
+      "eta": 0.9,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 83.08067110412412,
+      "F_phi_phi": 83.08067110404812,
+      "F_theta_phi": 6.270193419220276e-13,
+      "N2_Tr_Finv": 9.629195207122658,
+      "ratio_to_bound": 2.648028681958731
+    },
+    {
+      "N": 20,
+      "eta": 0.9,
+      "probe": "sine (BW)",
+      "F_theta_theta": 3.266565038896731,
+      "F_phi_phi": 46.56336898776594,
+      "F_theta_phi": 9.677371743354558e-12,
+      "N2_Tr_Finv": 131.043232869357,
+      "ratio_to_bound": 36.03688903907318
+    },
+    {
+      "N": 20,
+      "eta": 0.9,
+      "probe": "NOON",
+      "F_theta_theta": 17.999998373763432,
+      "F_phi_phi": 48.6305969953262,
+      "F_theta_phi": -7.089331341834498e-14,
+      "N2_Tr_Finv": 30.447498536927466,
+      "ratio_to_bound": 8.373062097655053
+    },
+    {
+      "N": 20,
+      "eta": 0.8,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 40.21567409994141,
+      "F_phi_phi": 40.21567409990793,
+      "F_theta_phi": 2.476005556011335e-13,
+      "N2_Tr_Finv": 19.892741273271323,
+      "ratio_to_bound": 5.470503850149614
+    },
+    {
+      "N": 20,
+      "eta": 0.8,
+      "probe": "sine (BW)",
+      "F_theta_theta": 2.4932864168014715,
+      "F_phi_phi": 34.776047810378664,
+      "F_theta_phi": 6.914322202464778e-12,
+      "N2_Tr_Finv": 171.93299588187134,
+      "ratio_to_bound": 47.281573867514616
+    },
+    {
+      "N": 20,
+      "eta": 0.8,
+      "probe": "NOON",
+      "F_theta_theta": 15.999998676284791,
+      "F_phi_phi": 4.611679869510856,
+      "F_theta_phi": 9.963145373533514e-14,
+      "N2_Tr_Finv": 111.7362915155661,
+      "ratio_to_bound": 30.727480166780676
+    },
+    {
+      "N": 20,
+      "eta": 0.6,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 14.54966692211968,
+      "F_phi_phi": 14.549666922108099,
+      "F_theta_phi": -6.183973562372919e-13,
+      "N2_Tr_Finv": 54.9840765621987,
+      "ratio_to_bound": 15.120621054604644
+    },
+    {
+      "N": 20,
+      "eta": 0.6,
+      "probe": "sine (BW)",
+      "F_theta_theta": 1.355599829023176,
+      "F_phi_phi": 19.577882311461526,
+      "F_theta_phi": 4.308347194161537e-12,
+      "N2_Tr_Finv": 315.50354887386874,
+      "ratio_to_bound": 86.76347594031391
+    },
+    {
+      "N": 20,
+      "eta": 0.6,
+      "probe": "NOON",
+      "F_theta_theta": 11.999998946147127,
+      "F_phi_phi": 0.014624614260734352,
+      "F_theta_phi": -6.24740638047423e-15,
+      "N2_Tr_Finv": 27384.48208238255,
+      "ratio_to_bound": 7530.732572655202
+    },
+    {
+      "N": 20,
+      "eta": 0.4,
+      "probe": "rot Twin Fock",
+      "F_theta_theta": 6.021896751753577,
+      "F_phi_phi": 6.021896751747913,
+      "F_theta_phi": 1.7476072494677973e-13,
+      "N2_Tr_Finv": 132.84850819925072,
+      "ratio_to_bound": 36.53333975479395
+    },
+    {
+      "N": 20,
+      "eta": 0.4,
+      "probe": "sine (BW)",
+      "F_theta_theta": 0.6093836588726067,
+      "F_phi_phi": 10.387528584142352,
+      "F_theta_phi": 2.07512341293402e-12,
+      "N2_Tr_Finv": 694.908645262365,
+      "ratio_to_bound": 191.0998774471504
+    },
+    {
+      "N": 20,
+      "eta": 0.4,
+      "probe": "NOON",
+      "F_theta_theta": 7.999512181512641,
+      "F_phi_phi": 4.3980406470402305e-06,
+      "F_theta_phi": 2.1994498095479125e-13,
+      "N2_Tr_Finv": 90949641.4465001,
+      "ratio_to_bound": 25011151.397787526
+    }
+  ]
+}

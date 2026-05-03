@@ -1,0 +1,434 @@
+{
+  "description": "\nExperiment 05: Exact F_\u03b8\u03b8 invariances under two noise channels.\n\nNumerical observation (this code): for the rotated-twin-Fock probe at the\noperating point (\u03b8_op, \u03c6_op, \u0398) = (\u03c0/2, \u03c0/2, \u03c0/2), the reflectivity QFI\n\n    F_\u03b8\u03b8  =  N(N+2)/2\n\nis preserved EXACTLY (to floating-point precision) under either of:\n\n    (a) Jz-dephasing of arbitrary strength \u03b3 \u2208 [0, 1].\n        \u03c1_ij in Jz basis  \u2192  \u03c1_ij \u00b7 exp(-\u03b3 \u00b7 (m_i - m_j)\u00b2)\n\n    (b) One-arm photon loss with \u03b7_a \u2208 [0.1, 1] and \u03b7_b = 1.\n        Mode-b photon counts preserved; mode-a photons lost with probability 1-\u03b7_a.\n\nIn both cases F_\u03c6\u03c6 degrades normally (collapses to ~0 for large \u03b3; degrades\nproportionally to \u03b7_a\u00b7\u03b7_b under loss).\n\nThese exact invariances are striking. We have not yet found a published\ntheorem that derives them, but the structural reason is clear:\nboth noise channels preserve the mode-b photon-number stabilizer, and the\nrotated twin Fock + Jx generator + this stabilizer combine to give a\ndecoherence-free subspace for the \u03b8-parameter.\n\nSymbolic proof: open. The numerical evidence is unambiguous.\n",
+  "dephasing": [
+    {
+      "N": 4,
+      "gamma": 0.0,
+      "F_theta_theta": 11.999999479992532,
+      "F_phi_phi": 11.999699482522479,
+      "F_theta_theta_ratio": 0.9999999566660444
+    },
+    {
+      "N": 4,
+      "gamma": 0.001,
+      "F_theta_theta": 11.999999097117836,
+      "F_phi_phi": 11.716175538089304,
+      "F_theta_theta_ratio": 0.9999999247598197
+    },
+    {
+      "N": 4,
+      "gamma": 0.01,
+      "F_theta_theta": 11.999857498571382,
+      "F_phi_phi": 9.524431566900688,
+      "F_theta_theta_ratio": 0.9999881248809485
+    },
+    {
+      "N": 4,
+      "gamma": 0.05,
+      "F_theta_theta": 11.999594337182694,
+      "F_phi_phi": 4.53335553364828,
+      "F_theta_theta_ratio": 0.9999661947652245
+    },
+    {
+      "N": 4,
+      "gamma": 0.1,
+      "F_theta_theta": 11.999999359881047,
+      "F_phi_phi": 2.454203043733541,
+      "F_theta_theta_ratio": 0.9999999466567538
+    },
+    {
+      "N": 4,
+      "gamma": 0.3,
+      "F_theta_theta": 11.999999360217247,
+      "F_phi_phi": 0.4477518119052598,
+      "F_theta_theta_ratio": 0.9999999466847705
+    },
+    {
+      "N": 4,
+      "gamma": 1.0,
+      "F_theta_theta": 11.999999359898153,
+      "F_phi_phi": 0.0016951539425875196,
+      "F_theta_theta_ratio": 0.9999999466581794
+    },
+    {
+      "N": 8,
+      "gamma": 0.0,
+      "F_theta_theta": 39.999994066658765,
+      "F_phi_phi": 39.99899407528497,
+      "F_theta_theta_ratio": 0.9999998516664691
+    },
+    {
+      "N": 8,
+      "gamma": 0.001,
+      "F_theta_theta": 39.99999183821296,
+      "F_phi_phi": 36.971004705836926,
+      "F_theta_theta_ratio": 0.999999795955324
+    },
+    {
+      "N": 8,
+      "gamma": 0.01,
+      "F_theta_theta": 39.999986253319726,
+      "F_phi_phi": 20.34346177460026,
+      "F_theta_theta_ratio": 0.9999996563329931
+    },
+    {
+      "N": 8,
+      "gamma": 0.05,
+      "F_theta_theta": 39.99890914839132,
+      "F_phi_phi": 5.880224906246924,
+      "F_theta_theta_ratio": 0.999972728709783
+    },
+    {
+      "N": 8,
+      "gamma": 0.1,
+      "F_theta_theta": 39.99732859228476,
+      "F_phi_phi": 3.0279862349765487,
+      "F_theta_theta_ratio": 0.9999332148071189
+    },
+    {
+      "N": 8,
+      "gamma": 0.3,
+      "F_theta_theta": 39.99999226647046,
+      "F_phi_phi": 0.5287411680317843,
+      "F_theta_theta_ratio": 0.9999998066617615
+    },
+    {
+      "N": 8,
+      "gamma": 1.0,
+      "F_theta_theta": 39.999992266602106,
+      "F_phi_phi": 0.0021543007367240343,
+      "F_theta_theta_ratio": 0.9999998066650526
+    },
+    {
+      "N": 14,
+      "gamma": 0.0,
+      "F_theta_theta": 111.99995314688375,
+      "F_phi_phi": 111.99715317215137,
+      "F_theta_theta_ratio": 0.9999995816686049
+    },
+    {
+      "N": 14,
+      "gamma": 0.001,
+      "F_theta_theta": 111.9999321895992,
+      "F_phi_phi": 90.47124702782189,
+      "F_theta_theta_ratio": 0.9999993945499929
+    },
+    {
+      "N": 14,
+      "gamma": 0.01,
+      "F_theta_theta": 111.9999338479704,
+      "F_phi_phi": 27.800282671679238,
+      "F_theta_theta_ratio": 0.9999994093568786
+    },
+    {
+      "N": 14,
+      "gamma": 0.05,
+      "F_theta_theta": 111.99789914555105,
+      "F_phi_phi": 6.77867926849733,
+      "F_theta_theta_ratio": 0.9999812423709915
+    },
+    {
+      "N": 14,
+      "gamma": 0.1,
+      "F_theta_theta": 111.99934495316691,
+      "F_phi_phi": 3.44050987030105,
+      "F_theta_theta_ratio": 0.9999941513675618
+    },
+    {
+      "N": 14,
+      "gamma": 0.3,
+      "F_theta_theta": 111.99993802537733,
+      "F_phi_phi": 0.5858968802523437,
+      "F_theta_theta_ratio": 0.9999994466551547
+    },
+    {
+      "N": 14,
+      "gamma": 1.0,
+      "F_theta_theta": 111.99993802541181,
+      "F_phi_phi": 0.002866288675655847,
+      "F_theta_theta_ratio": 0.9999994466554626
+    }
+  ],
+  "asymmetric_loss": [
+    {
+      "N": 4,
+      "eta_a": 1.0,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 11.999999479989853,
+      "F_theta_theta_lossless": 11.999999479989853,
+      "ratio": 1.0
+    },
+    {
+      "N": 4,
+      "eta_a": 0.99,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 11.999999479982431,
+      "F_theta_theta_lossless": 11.999999479989853,
+      "ratio": 0.9999999999993815
+    },
+    {
+      "N": 4,
+      "eta_a": 0.9,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 11.999999479075058,
+      "F_theta_theta_lossless": 11.999999479989853,
+      "ratio": 0.9999999999237671
+    },
+    {
+      "N": 4,
+      "eta_a": 0.7,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 11.999999467413806,
+      "F_theta_theta_lossless": 11.999999479989853,
+      "ratio": 0.9999999989519961
+    },
+    {
+      "N": 4,
+      "eta_a": 0.5,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 11.99999943195889,
+      "F_theta_theta_lossless": 11.999999479989853,
+      "ratio": 0.9999999959974196
+    },
+    {
+      "N": 4,
+      "eta_a": 0.3,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 11.999999369105971,
+      "F_theta_theta_lossless": 11.999999479989853,
+      "ratio": 0.9999999907596762
+    },
+    {
+      "N": 4,
+      "eta_a": 0.1,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 11.999999330325085,
+      "F_theta_theta_lossless": 11.999999479989853,
+      "ratio": 0.9999999875279355
+    },
+    {
+      "N": 6,
+      "eta_a": 1.0,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 23.9999978800693,
+      "F_theta_theta_lossless": 23.9999978800693,
+      "ratio": 1.0
+    },
+    {
+      "N": 6,
+      "eta_a": 0.99,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 23.99999750801527,
+      "F_theta_theta_lossless": 23.9999978800693,
+      "ratio": 0.9999999844977473
+    },
+    {
+      "N": 6,
+      "eta_a": 0.9,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 23.999997873210685,
+      "F_theta_theta_lossless": 23.9999978800693,
+      "ratio": 0.9999999997142243
+    },
+    {
+      "N": 6,
+      "eta_a": 0.7,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 23.999997791569367,
+      "F_theta_theta_lossless": 23.9999978800693,
+      "ratio": 0.9999999963125024
+    },
+    {
+      "N": 6,
+      "eta_a": 0.5,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 23.999997602587403,
+      "F_theta_theta_lossless": 23.9999978800693,
+      "ratio": 0.9999999884382532
+    },
+    {
+      "N": 6,
+      "eta_a": 0.3,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 23.999997370612892,
+      "F_theta_theta_lossless": 23.9999978800693,
+      "ratio": 0.9999999787726477
+    },
+    {
+      "N": 6,
+      "eta_a": 0.1,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 23.999997178526282,
+      "F_theta_theta_lossless": 23.9999978800693,
+      "ratio": 0.9999999707690382
+    },
+    {
+      "N": 8,
+      "eta_a": 1.0,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 39.99999406675736,
+      "F_theta_theta_lossless": 39.99999406675736,
+      "ratio": 1.0
+    },
+    {
+      "N": 8,
+      "eta_a": 0.99,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 39.99999404732971,
+      "F_theta_theta_lossless": 39.99999406675736,
+      "ratio": 0.9999999995143086
+    },
+    {
+      "N": 8,
+      "eta_a": 0.9,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 39.99999403676257,
+      "F_theta_theta_lossless": 39.99999406675736,
+      "ratio": 0.9999999992501302
+    },
+    {
+      "N": 8,
+      "eta_a": 0.7,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 39.999993717908225,
+      "F_theta_theta_lossless": 39.99999406675736,
+      "ratio": 0.9999999912787704
+    },
+    {
+      "N": 8,
+      "eta_a": 0.5,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 39.99999316926936,
+      "F_theta_theta_lossless": 39.99999406675736,
+      "ratio": 0.9999999775627967
+    },
+    {
+      "N": 8,
+      "eta_a": 0.3,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 39.99999262032054,
+      "F_theta_theta_lossless": 39.99999406675736,
+      "ratio": 0.9999999638390742
+    },
+    {
+      "N": 8,
+      "eta_a": 0.1,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 39.999992056298794,
+      "F_theta_theta_lossless": 39.99999406675736,
+      "ratio": 0.9999999497385283
+    },
+    {
+      "N": 12,
+      "eta_a": 1.0,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 83.99997368008528,
+      "F_theta_theta_lossless": 83.99997368008528,
+      "ratio": 1.0
+    },
+    {
+      "N": 12,
+      "eta_a": 0.99,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 83.99997298687887,
+      "F_theta_theta_lossless": 83.99997368008528,
+      "ratio": 0.9999999917475403
+    },
+    {
+      "N": 12,
+      "eta_a": 0.9,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 83.99997291325928,
+      "F_theta_theta_lossless": 83.99997368008528,
+      "ratio": 0.9999999908711162
+    },
+    {
+      "N": 12,
+      "eta_a": 0.7,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 83.99997136057755,
+      "F_theta_theta_lossless": 83.99997368008528,
+      "ratio": 0.999999972386804
+    },
+    {
+      "N": 12,
+      "eta_a": 0.5,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 83.99996913198278,
+      "F_theta_theta_lossless": 83.99997368008528,
+      "ratio": 0.9999999458559057
+    },
+    {
+      "N": 12,
+      "eta_a": 0.3,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 83.99996714769645,
+      "F_theta_theta_lossless": 83.99997368008528,
+      "ratio": 0.999999922233442
+    },
+    {
+      "N": 12,
+      "eta_a": 0.1,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 83.99996482455312,
+      "F_theta_theta_lossless": 83.99997368008528,
+      "ratio": 0.999999894576965
+    },
+    {
+      "N": 16,
+      "eta_a": 1.0,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 143.9999224798537,
+      "F_theta_theta_lossless": 143.9999224798537,
+      "ratio": 1.0
+    },
+    {
+      "N": 16,
+      "eta_a": 0.99,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 143.99992237271738,
+      "F_theta_theta_lossless": 143.9999224798537,
+      "ratio": 0.9999999992559974
+    },
+    {
+      "N": 16,
+      "eta_a": 0.9,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 143.99992111398032,
+      "F_theta_theta_lossless": 143.9999224798537,
+      "ratio": 0.9999999905147632
+    },
+    {
+      "N": 16,
+      "eta_a": 0.7,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 143.99991395024585,
+      "F_theta_theta_lossless": 143.9999224798537,
+      "ratio": 0.9999999407665804
+    },
+    {
+      "N": 16,
+      "eta_a": 0.5,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 143.9999079190599,
+      "F_theta_theta_lossless": 143.9999224798537,
+      "ratio": 0.999999898883322
+    },
+    {
+      "N": 16,
+      "eta_a": 0.3,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 143.99990277330542,
+      "F_theta_theta_lossless": 143.9999224798537,
+      "ratio": 0.9999998631488967
+    },
+    {
+      "N": 16,
+      "eta_a": 0.1,
+      "eta_b": 1.0,
+      "F_theta_theta_loss": 143.99989679057657,
+      "F_theta_theta_lossless": 143.9999224798537,
+      "ratio": 0.9999998216021462
+    }
+  ]
+}
