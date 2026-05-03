@@ -190,26 +190,40 @@ induced gaps that *could in principle* open between SLD and Holevo bounds.
 Status: **conjectured general result; numerically verified to N = 8**. SDP
 becomes intractable in dense form for larger N.
 
-### Finding 5 — Exact F_θθ invariances (the most striking result)
+### Finding 5 — Conjectured F_θθ invariances (the most striking result)
 
 For the rotated twin Fock probe at the symmetric operating point, the
-reflectivity QFI **F_θθ = N(N+2)/2 is preserved exactly** under either of
+reflectivity QFI **F_θθ = N(N+2)/2 appears to be preserved** under either of
 two distinct noise channels:
 
 (a) **J_z-dephasing** of arbitrary strength γ ∈ [0, 1].
 (b) **One-arm photon loss** with η_a ∈ [0.1, 1] and η_b = 1.
 
-Meanwhile F_φφ degrades normally.
+Meanwhile F_φφ degrades normally (collapses for case (a), shrinks
+proportionally for case (b)).
 
 ![invariances](docs/fig_invariances.png)
 
-Verified to floating-point precision for N up to 14 (dephasing) and N up
-to 16 (asymmetric loss).
+Numerical precision actually observed (`results/05_invariances.json`):
 
-Status: **conjectured; not yet derived analytically**. The structural
-reason (preserved mode-b stabilizer + appropriate decoherence-free subspace
-geometry) is plausible but unproven. **This is the finding most in need of
-independent verification by a domain expert.**
+| Channel | N range tested | Max relative deviation of F_θθ from N(N+2)/2 |
+|---|---|---|
+| J_z-dephasing, γ ∈ [0, 1] | 4, 8, 14 | 2.7 × 10⁻³ (at N=8, γ=0.05) |
+| Asymmetric loss, η_a ∈ [0.1, 1], η_b = 1 | 4, 6, 8, 12, 16 | 1.0 × 10⁻⁴ (at N=16, η_a=0.1) |
+
+These deviations are non-monotonic in the noise strength and grow with
+N, consistent with finite-difference + SLD-eigenvalue numerical artifacts
+(h = 10⁻⁴ in the QFI estimator, eigenvalue floor 10⁻⁷); a true exact
+invariance would still be visible through this floor. **The claim that
+F_θθ is *exactly* invariant is therefore a numerical conjecture, not a
+verified equality**, but the data are extremely consistent with it.
+
+Status: **conjecture; not derived analytically**. The structural reason
+(preserved mode-b stabilizer + appropriate decoherence-free subspace
+geometry) is plausible but unproven. **This is the finding most in need
+of independent verification by a domain expert.** A symbolic proof at
+small N (e.g. via sympy) would settle whether the invariance is exact or
+approximate.
 
 ### Finding 6 — Loss tolerance ranking
 
@@ -268,10 +282,14 @@ The most honest reading of this code:
    - Several straw-man comparisons (split-N protocol, "set D minimality"
      claim before checking minimality properly) that were corrected.
 
-3. **Symbolic proofs are limited.** Findings 3, 4, 5 are numerical to
-   floating-point precision. The structural arguments are persuasive but not
-   complete proofs. Findings 4 and 5 are the most compelling candidates for
-   genuine theorems but **require independent verification**.
+3. **Symbolic proofs are limited.** Findings 3 and 4 are numerical to
+   solver/eigenvalue tolerance (~10⁻⁵ relative). Finding 5 is to numerical-
+   estimator precision (~10⁻⁴ for asymmetric loss, ~10⁻³ for dephasing) —
+   small but **not** literally floating-point precision; whether the
+   invariance is *exactly* exact is a conjecture, not a verified equality.
+   The structural arguments are persuasive but not complete proofs.
+   Findings 4 and 5 are the most compelling candidates for genuine theorems
+   but **require independent verification**.
 
 4. **N range is modest.**
    - Pure-state QFI: verified to N = 30.

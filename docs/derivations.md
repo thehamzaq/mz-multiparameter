@@ -188,7 +188,7 @@ fundamental quantum limit.
 **Symbolic proof for general N: open.** Computational scaling
 (O((N+1)⁴(N+2)⁴) for dense SDP) prevents direct verification beyond N = 8.
 
-## 7. Exact F_θθ invariances (numerical observation)
+## 7. Conjectured F_θθ invariances (numerical observation)
 
 **Numerical observation (this repository).** For the rotated twin Fock
 probe at the symmetric operating point (π/2, π/2, π/2):
@@ -196,20 +196,27 @@ probe at the symmetric operating point (π/2, π/2, π/2):
 (a) Under Jz-dephasing of arbitrary strength γ ∈ [0, 1]:
 
 ```
-F_θθ(γ)  =  N(N+2)/2     EXACTLY (to floating-point precision)
+F_θθ(γ)  ≈  N(N+2)/2     (relative deviation ≤ 2.7×10⁻³, non-monotonic)
 F_φφ(γ)  →  0            as γ → ∞
 ```
 
-Verified for N ∈ {4, 8, 14}.
+Tested for N ∈ {4, 8, 14}.
 
 (b) Under one-arm photon loss with η_a ∈ [0.1, 1.0] and η_b = 1:
 
 ```
-F_θθ(η_a, 1)  =  F_θθ(1, 1)  =  N(N+2)/2     EXACTLY
+F_θθ(η_a, 1)  ≈  F_θθ(1, 1)  ≈  N(N+2)/2     (relative deviation ≤ 1.0×10⁻⁴)
 F_φφ(η_a, 1)  ≈  η_a · F_φφ(1, 1)            (degrades normally)
 ```
 
-Verified for N ∈ {4, 6, 8, 12, 16}.
+Tested for N ∈ {4, 6, 8, 12, 16}.
+
+The numerical deviations from N(N+2)/2 are consistent with finite-
+difference QFI estimator precision (h = 10⁻⁴) plus SLD eigenvalue-floor
+artifacts (10⁻⁷). They are non-monotonic in the noise parameter, which
+suggests they are estimator artifacts rather than true deviations from
+invariance — but **the data alone do not distinguish exact invariance
+from approximate invariance** at the precision we have access to.
 
 **Conjectured structural reason.** Both noise channels preserve the
 mode-b stabilizer `n_b · I` (b-mode photon number). The rotated twin
@@ -220,5 +227,6 @@ free subspace structure for the reflectivity parameter only.
 **Symbolic proof: open.** This conjecture was identified by AI numerical
 exploration; we are not aware of a published derivation. **Independent
 verification by a quantum-metrology theorist is required before any
-analytical claim.** The numerical evidence is unambiguous; the structural
-claim is plausible but unproven here.
+analytical claim.** A symbolic proof at small N (e.g. via sympy on the
+explicit Kraus action) would settle whether the invariance is exact or
+just approximate.
